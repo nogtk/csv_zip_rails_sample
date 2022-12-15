@@ -12,9 +12,9 @@ module Api
         end
 
         send_data(
-          File.read(zip_file_location),
-          filename: 'account.zip',
-          type: 'application/zip',
+          csv_string,
+          filename: 'account.csv',
+          type: 'text/csv',
         )
 
         File.delete(zip_file_location)
