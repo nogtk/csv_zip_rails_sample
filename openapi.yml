@@ -1,0 +1,19 @@
+openapi: 3.0.3
+info:
+  title: 'Sample'
+  version: 1.0.0
+servers:
+  - url: localhost:3000
+
+paths:
+  /api/accounts/csv:
+    get:
+      operationId: 'sample_csv'
+      responses:
+        200:
+          description: csvをzipファイルでダウンロードするエンドポイント
+          content:
+            application/zip:
+              schema:
+                type: string
+                format: binary
